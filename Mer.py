@@ -1,4 +1,4 @@
-with open('yo.txt', 'r') as file:
+with open('rosalind_mer.txt', 'r') as file:
     content = file.read()
     content = content.strip(' ').split('\n')
     l=[]
