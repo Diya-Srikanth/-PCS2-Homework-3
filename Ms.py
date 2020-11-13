@@ -1,4 +1,4 @@
-with open("ms.txt", 'r') as file:
+with open("rosalind_ms.txt", 'r') as file:
     file = file.read()
     f = list(map(int, file.split()))
     a = int(f[0]) // 2
