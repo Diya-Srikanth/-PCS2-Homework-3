@@ -1,10 +1,18 @@
+def maj(f,a):
+    for x in f:
+        if f.count(x)>a/2:
+            return x
+    return(-1)
+            
 with open("rosalind_maj.txt", "r") as file:
-    k, n = map(int, file.readline().strip().split())
-    a = [line.strip().split() for line in file]
-
-for i in range(k):
-    c = [a[i].count(a[i][j]) > n/2 for j in range(n)]
-    if any(c):
-        print(a[i][c.index(True)], end=" ")
-    else:
-        print("-1", end=" ")
+    file = file.read()
+    f = file.splitlines()
+    l=[]
+    a = list(map(int, f[0].split()))
+    f.remove(f[0])
+    for i in range(a[0]):
+        f[i] = list(map(int, f[i].split()))
+        p = (maj(f[i],a[1]))
+        l.append(p)
+    print(" ".join(str(x) for x in l))
+        
