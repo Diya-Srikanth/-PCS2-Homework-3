@@ -23,9 +23,8 @@ def inv(arr):
     c += b[j:]
     return c, inversions
 
-if __name__ == "__main__":
-    with open("rosalind_inv.txt", "r") as f:
+with open("rosalind_inv.txt", "r") as f:
         n = int(f.readline().strip())
         A = [int(i) for i in f.readline().strip().split()]
-    arr, inv_count = inv(A)
-    print(inv_count)
+        arr, inv_count = inv(A)
+        print(inv_count)
